@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-color: #abd1c6;
+        }
+        .navbar{
+            color: #001e1d;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Menu</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="main.html">Strona Główna</a>
+              <a class="nav-link" href="extraction.html">Ekstrakcja</a>
+              <a class="nav-link" href="p_list.html">Lista produktów</a>
+              <a class="nav-link" href="author.html">O Autorze</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <table id="tab" class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Autor</th>
+            <th>Rekomendacja</th>
+            <th>Gwiazdki</th>
+            <th>Zakupiono</th>
+            <th>Data wystawienia opinii</th>
+            <th>Data zakupu</th>
+            <th>Przydatna</th>
+            <th>Nieprzydatna</th>
+            <th>Treść</th>
+            <th>Lista wad</th>
+            <th>Lista zalet</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>Tak</td>
+            <td>4</td>
+            <td>Tak</td>
+            <td>2023-05-30</td>
+            <td>2023-05-15</td>
+            <td>10</td>
+            <td>2</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+            <td>Nieznane</td>
+            <td>Świetna jakość</td>
+          </tr>
+        </tbody>
+      </table>
+    
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+      <script>
+        $(document).ready(function() {
+          $('#tab').DataTable();
+        });
+      </script>
+</body>
+</html>
