@@ -49,23 +49,13 @@
         </div>
     </nav>
     <div class="container">
-        <form>
+        <form method="post" action="{{url_for('extraction')}}">
             <div class="mb-3">
               <label for="id" class="form-label">ID Produktu</label>
-              <input type="number" class="form-control" id="id">
+              <input type="number" class="form-control" id="product_code" required>
             </div>
             <button type="button" class="btn" onclick=dataPull()>Potwierdź</button>
           </form>
     </div>
-    <script>
-        function dataPull(){
-            var product_id = document.getElementById("id").value;
-            if(product_id == "") {
-                alert("Błędny kod produktu");
-            }else{
-                window.location.href = "https://www.ceneo.pl/" +product_id;
-            }
-        }
-    </script>
 </body>
 </html>
